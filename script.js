@@ -34,5 +34,3 @@ fullscreenBtn.addEventListener("click", function () {
     }
   }
 });
-
-// document.body.style.transition = "background-image 0.5s ease-in-out";
