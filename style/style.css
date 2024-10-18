@@ -59,3 +59,10 @@ button:hover {
   color: #555;
   margin-top: 10px;
 }
+
+section {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+  border-radius: 5px;
+}

@@ -1,5 +1,9 @@
 const button = document.getElementById("imageBtn");
+const resetBtn = document.getElementById("resetBtn");
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+const fullscreenStatus = document.getElementById("fullscreenStatus");
 const counterElement = document.getElementById("counter");
+const currentImageURLElement = document.getElementById("currentImageURL");
 
 let counter = 0;
 
@@ -20,17 +24,25 @@ button.addEventListener("click", function () {
   console.log(`Random value : ${Math.floor(Math.random() * 4)}`);
 
   document.body.style.backgroundImage = `url(${randomImage})`;
+  currentImageURLElement.textContent = `Current Image URL: ${randomImage}`;
 
   counter++;
+  counterElement.textContent = `Images Changed: ${counter}`;
+});
+
+resetBtn.addEventListener("click", function () {
+  counter = 0;
   counterElement.textContent = `Images Changed: ${counter}`;
 });
 
 fullscreenBtn.addEventListener("click", function () {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
+    fullscreenStatus.textContent = "Fullscreen mode is active";
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
+      fullscreenStatus.textContent = "Exited fullscreen mode";
     }
   }
 });
