@@ -17,11 +17,11 @@ button.addEventListener("click", function () {
   ];
 
   const randomImage = images[Math.floor(Math.random() * images.length)];
-  console.log(
-    `Random Value Index for array: ${Math.floor(Math.random() * images.length)}`
-  );
-  console.log(`Image Array Length ${images.length}`);
-  console.log(`Random value : ${Math.floor(Math.random() * 4)}`);
+  // console.log(
+  //   `Random Value Index for array: ${Math.floor(Math.random() * images.length)}`
+  // );
+  // console.log(`Image Array Length ${images.length}`);
+  // console.log(`Random value : ${Math.floor(Math.random() * 4)}`);
 
   document.body.style.backgroundImage = `url(${randomImage})`;
   currentImageURLElement.textContent = `Current Image URL: ${randomImage}`;
